@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>MainWindow</class>
- <widget class="QMainWindow" name="MainWindow">
+ <class>MainView</class>
+ <widget class="QMainWindow" name="MainView">
   <property name="geometry">
    <rect>
     <x>0</x>
@@ -15,18 +15,21 @@
   </property>
   <widget class="QWidget" name="centralwidget">
    <layout class="QGridLayout" name="gridLayout">
-    <item row="0" column="0">
-     <widget class="QVTKRenderWidget" name="AxialWidget" native="true"/>
-    </item>
-    <item row="0" column="1">
-     <widget class="QVTKRenderWidget" name="SagittalWidget" native="true"/>
-    </item>
-    <item row="1" column="0">
-     <widget class="QVTKRenderWidget" name="CoronalWidget" native="true"/>
-    </item>
-    <item row="1" column="1">
-     <widget class="QVTKRenderWidget" name="ThreeDimensionsWidget" native="true"/>
-    </item>
+    <property name="leftMargin">
+     <number>0</number>
+    </property>
+    <property name="topMargin">
+     <number>0</number>
+    </property>
+    <property name="rightMargin">
+     <number>0</number>
+    </property>
+    <property name="bottomMargin">
+     <number>0</number>
+    </property>
+    <property name="horizontalSpacing">
+     <number>0</number>
+    </property>
    </layout>
   </widget>
   <widget class="QMenuBar" name="menubar">
@@ -38,17 +41,44 @@
      <height>26</height>
     </rect>
    </property>
+   <widget class="QMenu" name="menuFile">
+    <property name="title">
+     <string>File</string>
+    </property>
+   </widget>
+   <widget class="QMenu" name="menuEdit">
+    <property name="title">
+     <string>Edit</string>
+    </property>
+   </widget>
+   <widget class="QMenu" name="menuWindow">
+    <property name="title">
+     <string>Window</string>
+    </property>
+   </widget>
+   <widget class="QMenu" name="menuHelp">
+    <property name="title">
+     <string>Help</string>
+    </property>
+   </widget>
+   <addaction name="menuFile"/>
+   <addaction name="menuEdit"/>
+   <addaction name="menuWindow"/>
+   <addaction name="menuHelp"/>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
+  <widget class="QToolBar" name="toolBar">
+   <property name="windowTitle">
+    <string>toolBar</string>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+  </widget>
  </widget>
- <customwidgets>
-  <customwidget>
-   <class>QVTKRenderWidget</class>
-   <extends>QWidget</extends>
-   <header>QVTKRenderWidget.h</header>
-   <container>1</container>
-  </customwidget>
- </customwidgets>
  <resources/>
  <connections/>
 </ui>
