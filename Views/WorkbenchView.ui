@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>WorkbenchView</class>
+ <widget class="QWidget" name="WorkbenchView">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>810</width>
+    <height>591</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <layout class="QGridLayout" name="gridLayout">
+   <item row="0" column="0">
+    <widget class="QWidget" name="DisplayWidget" native="true">
+     <layout class="QGridLayout" name="gridLayout_2">
+      <property name="leftMargin">
+       <number>0</number>
+      </property>
+      <property name="topMargin">
+       <number>0</number>
+      </property>
+      <property name="rightMargin">
+       <number>0</number>
+      </property>
+      <property name="bottomMargin">
+       <number>0</number>
+      </property>
+      <item row="0" column="0">
+       <widget class="QVTKRenderWidget" name="AxialWidget" native="true"/>
+      </item>
+      <item row="0" column="1">
+       <widget class="QVTKRenderWidget" name="SagittalWidget" native="true"/>
+      </item>
+      <item row="1" column="0">
+       <widget class="QVTKRenderWidget" name="CoronalWidget" native="true"/>
+      </item>
+      <item row="1" column="1">
+       <widget class="QVTKRenderWidget" name="ThreeDimensionsWidget" native="true"/>
+      </item>
+     </layout>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>QVTKRenderWidget</class>
+   <extends>QWidget</extends>
+   <header>QVTKRenderWidget.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+</ui>

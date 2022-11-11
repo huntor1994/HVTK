@@ -1,0 +1,11 @@
+#selectBtn:enabled{
+background-color: #ffffff;
+border-radius: 10px;
+border:2px solid #d56056;
+}
+
+#selectBtn:hover{
+background-color:#9e9e9e;
+border-radius: 10px;
+border:2px solid #d56056;
+}
